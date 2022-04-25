@@ -21,18 +21,7 @@
                     <div class="col-xxl-4 col-md-6">
                         <div class="card info-card sales-card">
 
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Wybierz</h6>
-                                    </li>
 
-                                    <li><a class="dropdown-item" href="event/concerts/today">Dzisiaj</a></li>
-                                    <li><a class="dropdown-item" href="#">W tym tygodniu</a></li>
-                                    <li><a class="dropdown-item" href="#">W tym miesiącu</a></li>
-                                </ul>
-                            </div>
 
                             <div class="card-body">
                                 <a href="event/concerts/today"><h5 class="card-title">Koncerty <span>| Dzisiaj</span></h5></a>
@@ -55,18 +44,6 @@
                     <div class="col-xxl-4 col-md-6">
                         <div class="card info-card revenue-card">
 
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Wybierz</h6>
-                                    </li>
-
-                                    <li><a class="dropdown-item" href="event/parties/today">Dzisiaj</a></li>
-                                    <li><a class="dropdown-item" href="#">W tym tygodniu</a></li>
-                                    <li><a class="dropdown-item" href="#">W tym miesiącu</a></li>
-                                </ul>
-                            </div>
 
                             <div class="card-body">
                                 <a href="event/parties/today"><h5 class="card-title">Imprezy <span>| Dzisiaj</span></h5></a>
@@ -89,18 +66,6 @@
 
                         <div class="card info-card customers-card">
 
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Wybierz</h6>
-                                    </li>
-
-                                    <li><a class="dropdown-item" href="event/festivals/today">Dzisiaj</a></li>
-                                    <li><a class="dropdown-item" href="#">W tym tygodniu</a></li>
-                                    <li><a class="dropdown-item" href="#">W tym miesiącu</a></li>
-                                </ul>
-                            </div>
 
                             <div class="card-body">
                                 <a href="event/festivals/today"><h5 class="card-title">Festiwale <span>| Dzisiaj</span></h5></a>
@@ -123,18 +88,6 @@
                     <div class="col-xxl-4 col-md-6">
                         <div class="card info-card sales-card">
 
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Wybierz</h6>
-                                    </li>
-
-                                    <li><a class="dropdown-item" href="event/theatre/today">Dzisiaj</a></li>
-                                    <li><a class="dropdown-item" href="#">W tym tygodniu</a></li>
-                                    <li><a class="dropdown-item" href="#">W tym miesiącu</a></li>
-                                </ul>
-                            </div>
 
                             <div class="card-body">
                                 <a href="event/theatre/today"><h5 class="card-title">Teatr <span>| Dzisiaj</span></h5></a>
@@ -156,18 +109,6 @@
                     <div class="col-xxl-4 col-md-6">
                         <div class="card info-card revenue-card">
 
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Wybierz</h6>
-                                    </li>
-
-                                    <li><a class="dropdown-item" href="event/exhibitions/today">Dzisiaj</a></li>
-                                    <li><a class="dropdown-item" href="#">W tym tygodniu</a></li>
-                                    <li><a class="dropdown-item" href="#">W tym miesiącu</a></li>
-                                </ul>
-                            </div>
 
                             <div class="card-body">
                                 <a href="event/exhibitions/today"><h5 class="card-title">Wystawy <span>| Dzisiaj</span></h5></a>
@@ -189,19 +130,7 @@
                     <div class="col-xxl-4 col-xl-12">
 
                         <div class="card info-card customers-card">
-
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Wybierz</h6>
-                                    </li>
-
-                                    <li><a class="dropdown-item" href="event/movies/today">Dzisiaj</a></li>
-                                    <li><a class="dropdown-item" href="#">W tym tygodniu</a></li>
-                                    <li><a class="dropdown-item" href="#">W tym miesiącu</a></li>
-                                </ul>
-                            </div>
+                            
 
                             <div class="card-body">
                                 <a href="event/movies/today"><h5 class="card-title">Filmy <span>| Dzisiaj</span></h5></a>
