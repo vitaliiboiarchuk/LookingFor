@@ -337,7 +337,7 @@ public class EventController {
                 model.addAttribute("show", true);
             }
             return "showMyEvents";
-            
+
     }
 
     @Secured("ROLE_USER")

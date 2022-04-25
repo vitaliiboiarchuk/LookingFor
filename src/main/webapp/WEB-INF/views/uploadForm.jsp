@@ -3,6 +3,10 @@
 
 <body>
 
+<%--  W tutorialu baeldung używają html zamiast jsp i nie do końca wiem jak to u nich działało,
+więc zdecydowałem  żeby zamienić to na jsp i spróbować z jsp poradzić
+     Po przesełaniu zdjęcia na stronę powinno odrazu wyświetlać mi listę tych zdjęć, ale nic nie dzieje się--%>
+
 <div th:if="${message}">
     <h2 th:text="${message}"/>
 </div>
