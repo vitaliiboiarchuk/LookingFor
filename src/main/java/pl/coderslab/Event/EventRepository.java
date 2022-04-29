@@ -13,9 +13,7 @@ import java.util.List;
 
 
 public interface EventRepository extends JpaRepository<Event, Long> {
-
-    List<Event> findAllByOrderByDateAsc();
-
+    
     long countAllByCategoryAndDate(Category category, String date);
 
     List<Event> findAllByCategoryAndDate(Category category, String date);
