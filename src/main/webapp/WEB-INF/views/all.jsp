@@ -6,10 +6,6 @@
 
 <main id="main" class="main">
 
-    <%--    <div class="pagetitle">--%>
-    <%--        <h1>Najbliższe wydarzenia</h1>--%>
-    <%--    </div><!-- End Page Title -->--%>
-
     <section class="section">
         <div class="row">
             <div class="col-lg-14">

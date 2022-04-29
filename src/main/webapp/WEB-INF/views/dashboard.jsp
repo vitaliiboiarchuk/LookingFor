@@ -31,7 +31,6 @@
                                         <i class="bi-music-note"></i>
                                     </div>
                                     <div class="ps-3">
-<%--                                        <h6>${concerts}</h6>--%>
                                         <h6>${concerts}</h6>
                                     </div>
                                 </div>
@@ -130,7 +129,7 @@
                     <div class="col-xxl-4 col-xl-12">
 
                         <div class="card info-card customers-card">
-                            
+
 
                             <div class="card-body">
                                 <a href="event/movies/today"><h5 class="card-title">Filmy <span>| Dzisiaj</span></h5></a>

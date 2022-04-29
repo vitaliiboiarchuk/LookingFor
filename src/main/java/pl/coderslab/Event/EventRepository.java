@@ -33,9 +33,6 @@ public interface EventRepository extends JpaRepository<Event, Long> {
 
     List<Event> getFirst5AllByArtistsOrderByDateAsc(User user);
 
-
-
-
 }
 
 

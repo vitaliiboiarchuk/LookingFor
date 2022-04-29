@@ -15,7 +15,7 @@
     <section class="section profile">
         <div class="row">
 
-            <jsp:include page="userImage.jsp"/>
+            <jsp:include page="managerImage.jsp"/>
 
             <div class="col-xl-8">
 

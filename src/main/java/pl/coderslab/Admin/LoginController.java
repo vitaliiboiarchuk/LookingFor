@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import pl.coderslab.Job.JobRepository;
 
 import javax.validation.Valid;
@@ -31,7 +32,6 @@ public class LoginController {
 
 
     @RequestMapping(value = {"/registration"}, method = RequestMethod.GET)
-
     public String registration(Model model) {
         model.addAttribute("user",new User());
         model.addAttribute("jobs",jobRepository.findAll());
@@ -40,27 +40,29 @@ public class LoginController {
 
 
     @RequestMapping(value = {"/registration"}, method = RequestMethod.POST)
-
-    public String registrationPost(@Valid User user, BindingResult bindingResult,  Model model) {
+    public String registrationPost(@Valid User user, BindingResult bindingResult, Model model, RedirectAttributes redirectAttributes) {
         User userExists = userService.findByUserName(user.getUsername());
         if (userExists != null) {
             bindingResult.rejectValue("username", "error.user",
                     "Użytkownik z taką nazwą już istnieje");
         }
+
         if (user.getUsername().isEmpty()) {
-            bindingResult.rejectValue("username","error.user","Pole nie może być puste");
+            bindingResult.rejectValue("username","error.user","Pole nie może być puste!");
         }
         if (user.getPassword().isEmpty()) {
-            bindingResult.rejectValue("password","error.user","Pole nie może być puste");
-
+            bindingResult.rejectValue("password","error.user","Pole nie może być puste!");
         }
+
         if (bindingResult.hasErrors()) {
             model.addAttribute("jobs",jobRepository.findAll());
             return "admin/registration";
         } else {
             userService.saveUser(user);
+            redirectAttributes.addFlashAttribute("message",
+                    "You successfully registered!");
             model.addAttribute("user",user.getUsername());
-            return "success";
+            return "redirect:/login";
         }
     }
 

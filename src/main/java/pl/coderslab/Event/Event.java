@@ -24,14 +24,14 @@ public class Event {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //    @Size(min = 10)
-//    @NotBlank
+
+    @NotBlank
     private String title;
 
-    //    @Size(min = 200)
-//    @NotBlank
+
     @Lob
     @Column(length = 100000)
+    @NotBlank
     private String content;
 
     @ManyToOne
@@ -43,19 +43,19 @@ public class Event {
     @ManyToMany(fetch = FetchType.EAGER)
     private List<User> artists;
 
-    //    @NotBlank
+    @NotBlank
     private String date;
 
-    //    @NotBlank
+    @NotBlank
     private String time;
 
-    //    @NotBlank
+    @NotBlank
     private String price;
 
     @ManyToOne
     private City city;
 
-    //    @NotBlank
+    @NotBlank
     private String address;
 
 

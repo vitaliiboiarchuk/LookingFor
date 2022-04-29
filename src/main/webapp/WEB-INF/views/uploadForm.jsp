@@ -1,14 +1,10 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html xmlns:th="https://www.thymeleaf.org">
-
 <body>
 
-<%--  W tutorialu baeldung używają html zamiast jsp i nie do końca wiem jak to u nich działało,
-więc zdecydowałem  żeby zamienić to na jsp i spróbować z jsp poradzić
-     Po przesełaniu zdjęcia na stronę powinno odrazu wyświetlać mi listę tych zdjęć, ale nic nie dzieje się--%>
-
 <div th:if="${message}">
-    <h2 th:text="${message}"/>
+    <h2 th:text="${message}"></h2>
 </div>
 
 <div>
@@ -23,7 +19,7 @@ więc zdecydowałem  żeby zamienić to na jsp i spróbować z jsp poradzić
 <div>
     <ul>
         <li th:each="file : ${files}">
-            <a th:href="${file}" th:text="${file}" />
+            <a th:href="${file}" th:text="${file}"></a>
         </li>
     </ul>
 </div>

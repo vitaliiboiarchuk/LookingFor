@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import pl.coderslab.Admin.CurrentUser;
 import pl.coderslab.Admin.User;
 import pl.coderslab.Admin.UserRepository;
@@ -42,14 +43,6 @@ public class EventController {
         this.jobRepository = jobRepository;
     }
 
-    @Secured("ROLE_ADMIN")
-    @GetMapping("/deleteAll")
-    public String deleteAll() {
-        eventRepository.deleteAll();
-        return "redirect:/event/all";
-    }
-
-
     @Secured("ROLE_USER")
     @GetMapping("/add")
     public String eventForm(@AuthenticationPrincipal CurrentUser currentUser, Model model) {
@@ -69,7 +62,9 @@ public class EventController {
     @Secured("ROLE_USER")
     @PostMapping("/add")
     public String eventAdd(@AuthenticationPrincipal CurrentUser currentUser, @Valid Event event, BindingResult result, Model model) {
+        User entityUser = currentUser.getUser();
         if (result.hasErrors()) {
+            model.addAttribute("user", userRepository.getById(entityUser.getId()));
             model.addAttribute("categories", categoryRepository.findAll());
             model.addAttribute("cities", cityRepository.findAll());
             model.addAttribute("users", userRepository.findAllByJobIdQuery(jobRepository.getById(2L)));
@@ -79,6 +74,7 @@ public class EventController {
         LocalTime localTime = LocalTime.parse(event.getTime());
 
         if (localDate.isBefore(LocalDate.now())) {
+            model.addAttribute("user", userRepository.getById(entityUser.getId()));
             model.addAttribute("categories", categoryRepository.findAll());
             model.addAttribute("cities", cityRepository.findAll());
             model.addAttribute("users", userRepository.findAllByJobIdQuery(jobRepository.getById(2L)));
@@ -88,7 +84,6 @@ public class EventController {
         eventRepository.save(event);
         model.addAttribute("id", event.getId());
         model.addAttribute("event", event);
-        User entityUser = currentUser.getUser();
         if (entityUser.getJob().getId() == 1L) {
             model.addAttribute("show", true);
         }
@@ -104,14 +99,6 @@ public class EventController {
         }
         return "city";
     }
-
-    @Secured("ROLE_ADMIN")
-    @GetMapping("/all")
-    public String all(Model model) {
-        model.addAttribute("events", eventRepository.findAllByOrderByDateAsc());
-        return "all";
-    }
-
 
     @GetMapping("/concerts")
     public String concerts(@AuthenticationPrincipal CurrentUser currentUser, Model model) {
@@ -385,13 +372,25 @@ public class EventController {
 
     @Secured("ROLE_USER")
     @GetMapping("/delete/{id}")
-    public String deleteEvent(@AuthenticationPrincipal CurrentUser currentUser, @PathVariable long id, Model model) {
+    public String deleteEvent(@AuthenticationPrincipal CurrentUser currentUser, @PathVariable long id, Model model, RedirectAttributes redirectAttributes) {
         User entityUser = currentUser.getUser();
         if (entityUser.getId().equals(eventRepository.findById(id).get().getUser().getId())) {
             eventRepository.deleteById(id);
+            redirectAttributes.addFlashAttribute("message",
+                    "Your event was successfully deleted!");
             model.addAttribute("user", userRepository.getById(entityUser.getId()));
-            return "deleted";
+            return "redirect:/myEvents";
         }
         return "403";
+    }
+
+    @GetMapping("/artists")
+    public String artists(@AuthenticationPrincipal CurrentUser currentUser, Model model) {
+        if (currentUser != null) {
+            User entityUser = currentUser.getUser();
+            model.addAttribute("user", userRepository.getById(entityUser.getId()));
+        }
+        model.addAttribute("artists",userRepository.findAllByJobIdQuery(jobRepository.getById(2L)));
+        return "artists";
     }
 }

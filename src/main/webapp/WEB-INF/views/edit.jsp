@@ -63,7 +63,7 @@
                         <div class="col-md-4">
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <form:input path="city" type="text" class="form-control" id="floatingCity"
+                                    <form:select path="city" items="${cities}" itemValue="id" itemLabel="name" class="form-control" id="floatingCity"
                                                 placeholder="City"/>
                                     <label for="floatingCity">Miasto</label>
                                 </div>
@@ -102,12 +102,13 @@
                         <form:hidden path="id"/>
                         <form:hidden path="created"/>
                         <form:hidden path="user"/>
-                            <%--                            <div class="col-md-12">--%>
-                            <%--                                <label for="inputNumber" class="col-sm-2 col-form-label">Zdjęcie</label>--%>
-                            <%--                                <div class="col-sm-10">--%>
-                            <%--                                    <input class="form-control" type="file" id="formFile">--%>
-                            <%--                                </div>--%>
-                            <%--                            </div>--%>
+
+<%--                        <div class="col-md-12">--%>
+<%--                            <label for="inputNumber" class="col-sm-2 col-form-label">Zdjęcie</label>--%>
+<%--                            <div class="col-sm-10">--%>
+<%--                                <input class="form-control" type="file" id="formFile">--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
 
                         <!-- End floating Labels Form -->
 

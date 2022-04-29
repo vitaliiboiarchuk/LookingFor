@@ -97,12 +97,12 @@
                         </div>
                         <form:errors path="time" class="alert alert-danger"/>
 
-                            <%--                            <div class="col-md-12">--%>
-                            <%--                                <label for="inputNumber" class="col-sm-2 col-form-label">Zdjęcie</label>--%>
-                            <%--                                <div class="col-sm-10">--%>
-                            <%--                                    <input class="form-control" type="file" id="formFile">--%>
-                            <%--                                </div>--%>
-                            <%--                            </div>--%>
+<%--                        <div class="col-md-12">--%>
+<%--                            <label for="inputNumber" class="col-sm-2 col-form-label">Zdjęcie</label>--%>
+<%--                            <div class="col-sm-10">--%>
+<%--                                <input class="form-control" type="file" id="formFile">--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
 
                         <!-- End floating Labels Form -->
 

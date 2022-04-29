@@ -19,7 +19,6 @@ public class User {
     private Long id;
 
     @Column(nullable = false, unique = true, length = 60)
-
     private String username;
 
     private String password;

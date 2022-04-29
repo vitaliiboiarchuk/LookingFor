@@ -15,7 +15,7 @@
   <section class="section profile">
     <div class="row">
 
-      <jsp:include page="userImage.jsp"/>
+      <jsp:include page="artistImage.jsp"/>
 
       <div class="col-xl-8">
 
@@ -58,7 +58,7 @@
                       <td>${event.date}</td>
                       <td>${event.time}</td>
                       <td>
-                        <a href="<c:url value="/event/showMyEvents/${event.id}/"/>">Pokaż</a>
+                        <a href="<c:url value="/event/show/${event.id}/"/>">Pokaż</a>
                       </td>
                     </tr>
                   </c:forEach>

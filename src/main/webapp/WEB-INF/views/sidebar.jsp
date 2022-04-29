@@ -14,6 +14,13 @@
         </li><!-- End wszystkie Nav -->
 
         <li class="nav-item">
+            <a class="nav-link " href="/event/artists">
+                <i class="bi bi-grid"></i>
+                <span>Artyści</span>
+            </a>
+        </li><!-- End wszystkie Nav -->
+
+        <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
                 <i class="bi-music-note"></i><span>Rozrywka</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>

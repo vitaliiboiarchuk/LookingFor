@@ -12,8 +12,7 @@ import java.util.List;
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByUsername(String username);
 
-    @Query("select u from User u where u.job = ?1")
+    @Query("select u from User u where u.job = ?1 order by u.name asc")
     List<User> findAllByJobIdQuery(Job job);
-
 
 }
