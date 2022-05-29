@@ -1,5 +1,5 @@
 The application is used to search for and add events for specific categories. 
-There is a registration and logging system.
+There are a registration and logging system.
 When registering you can choose your profile - Event Manager or Artist.
 By selecting the event manager's profile you can add events to the system.
 You can also add events by choosing the city where they will be held.
